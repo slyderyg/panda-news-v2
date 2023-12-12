@@ -16,3 +16,8 @@ export const deleteArticles = async (id) => {
     return data
 }
 
+export const getOneArticle = async (id) => {
+    const { data } = await $host.get('api/article/' + id)
+    return data
+}
+

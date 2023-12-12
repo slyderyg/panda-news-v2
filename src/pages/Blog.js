@@ -4,6 +4,7 @@ import { Context } from '..'
 import { Card, Container } from 'react-bootstrap'
 import '../index.css'
 import { getArticles } from '../http/articlesAPI'
+import { Link } from 'react-router-dom'
 
 
 const Blog = observer(() => {
@@ -20,7 +21,8 @@ const Blog = observer(() => {
             <Card.Body>
 
                 <Card.Title>
-                  {article.title}
+                  <Link className='link' to={'article/'+ article.id}>{article.title}</Link>
+              
                 </Card.Title>
 
                 <Card.Text className='text__cutter'>
